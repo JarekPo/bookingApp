@@ -1,1 +1,18 @@
 <h1>Home</h1>
+<h1>Welcome to the delivery booking system</h1>
+<% if user_signed_in? %>
+    <div>
+        <%= link_to "New booking", new_booking_path %>
+    </div>
+    <div>
+        <%= link_to "All bookings", bookings_path %>
+    </div>
+<% else %>
+    <div>
+        <%= link_to 'Login', new_user_session_path, class:"nav-link" %>
+    </div>
+    <div>
+        <%= link_to 'Register', new_user_registration_path, class:"nav-link" %>
+    </div>
+<% end %>
+   
