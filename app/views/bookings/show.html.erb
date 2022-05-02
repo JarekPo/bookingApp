@@ -3,8 +3,9 @@
 <%= render @booking %>
 
 <div>
+  <%= button_to "Print confirmation", '#', onclick: "window.print()" %>
   <%= link_to "Edit this booking", edit_booking_path(@booking) %> |
-  <%= link_to "Back to bookings", bookings_path %>
+  <%= link_to "All bookings", bookings_path %>
 
-  <%= button_to "Destroy this booking", @booking, method: :delete %>
+  <%= button_to "Cancel this booking", @booking, method: :delete %>
 </div>
