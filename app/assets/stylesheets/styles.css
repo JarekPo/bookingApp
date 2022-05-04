@@ -1,8 +1,4 @@
-/*
-.wrapper-about{
-    background-color: red;
-    display: flex;
-}
+
 .wrapper-home{
     background-image: url("home-bg.jpg");
     background-size: cover;
@@ -11,4 +7,10 @@
     height: 80vh;
 }
 
-*/
+.home-lead-text {
+    color: saddlebrown;
+}
+
+.booking-wrapper{
+    color:black;
+}
