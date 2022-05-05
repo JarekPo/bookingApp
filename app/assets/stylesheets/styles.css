@@ -14,3 +14,7 @@
 .booking-wrapper{
     color:black;
 }
+
+.bookings-index{
+    min-height: 60vh;
+}
