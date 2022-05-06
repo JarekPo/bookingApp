@@ -66,6 +66,9 @@ class BookingsController < ApplicationController
   #  redirect_to bookings_path, notice: "Not Authorized to edit this booking" if @booking.nil?
   #end
 
+  def Date
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_booking
