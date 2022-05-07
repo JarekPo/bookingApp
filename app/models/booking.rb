@@ -1,5 +1,5 @@
 class Booking < ApplicationRecord
-    validates_presence_of :Supplier_name, :Number_of_pallets, :Date
+    validates_presence_of :Supplier_name, :Number_of_pallets, :Date, :Order_number, :Goods_description
     belongs_to :user
 
     validates :Date,

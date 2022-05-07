@@ -13,6 +13,9 @@ a, .btn a{
         color: $links-color-hover;
     }
 }
+.bookings-index{
+    min-height: 60vh;
+}
 
 /* ---Home Page--- */
 .wrapper-home{
@@ -67,10 +70,6 @@ a, .btn a{
 /* ---Booking Page--- */
 .card{
     color: $secondary-color;
-}
-
-.bookings-index{
-    min-height: 60vh;
 }
 
 /* ---Header--- */

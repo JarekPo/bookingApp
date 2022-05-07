@@ -2,7 +2,6 @@
   <% if booking.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(booking.errors.count, "error") %> prohibited this booking from being saved:</h2>
-
       <ul>
         <% booking.errors.each do |error| %>
           <li><%= error.full_message %></li>
@@ -19,6 +18,16 @@
   <div class="col-md-3 col-lg-2 col-xl-4 mx-auto mb-4">
     <%= form.label :Number_of_pallets, style: "display: block", class: "form-label" %>
     <%= form.number_field :Number_of_pallets, class: "form-control" %>
+  </div>
+
+  <div class="col-md-3 col-lg-2 col-xl-4 mx-auto mb-4">
+    <%= form.label :Order_number, style: "display: block", class: "form-label" %>
+    <%= form.text_field :Order_number, class: "form-control" %>
+  </div>
+
+  <div class="col-md-3 col-lg-2 col-xl-4 mx-auto mb-4">
+    <%= form.label :Goods_description, style: "display: block", class: "form-label" %>
+    <%= form.text_field :Goods_description, class: "form-control" %>
   </div>
 
   <div class="col-md-3 col-lg-2 col-xl-4 mx-auto mb-4">
