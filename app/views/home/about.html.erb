@@ -1,53 +1,50 @@
 <h1>About us</h1>
-
-    <style>
-      .map {
-        height: 600px;
-        width: 100%
-      }
-    </style>
-    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.14.1/build/ol.js"></script>
-    <div class="wrapper-about">
-        <div>
-            <p>This Delivery Booking System was created to manage deliveries to our warehouse located in Ballina, Co. Mayo.</p><p> Each delivery must be booked in advance. Our exact location is marked on the map below.</p>
-            <p>Book your delivery <%= link_to "here", new_booking_path %>
-        </div>
-        <div>
-            <h4>Our address</h4>
-            <address>
-                Ballina Warehouse<br>
-                Abbey Street<br>
-                Ardnaree<br>
-                Ballina<br>
-                Co. Mayo<br>
-                Tel. 096 543210
-            </address>
-        </div>
-        <div id="map" class="map">
+  
+<div class="wrapper-about">
+  <div class="row">
+    <div class="col-md-6 col-lg-7 col-xl-8 mb-4">
+        <p>This Delivery Booking System was created to manage deliveries to our warehouse located in Ballina, Co. Mayo.</p><p> Each delivery must be booked in advance. Our exact location is marked on the map below.</p>
+        <div class="btn btn-lg btn-secondary fw-bold  btn-about">
+          <%= link_to "New Booking", new_booking_path %>
         </div>
     </div>
-    <script type="text/javascript">
-      var map = new ol.Map({
-        target: 'map',
-        layers: [
-          new ol.layer.Tile({
-            source: new ol.source.OSM()
-          })
-        ],
-        view: new ol.View({
-          center: ol.proj.fromLonLat([-9.15, 54.11]),
-          zoom: 7
-        })
-      });
+    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+      <h4 class="about-h4">Our address</h4>
+      <address>
+        Ballina Warehouse<br>
+        Abbey Street<br>
+        Ardnaree<br>
+        Ballina<br>
+        Co. Mayo<br>
+        Tel. 096 543210
+      </address>
+    </div>
+  </div>
+<div id="map" class="map">
+</div>
+</div>
+<script type="text/javascript">
+  var map = new ol.Map({
+    target: 'map',
+    layers: [
+      new ol.layer.Tile({
+        source: new ol.source.OSM()
+      })
+    ],
+    view: new ol.View({
+      center: ol.proj.fromLonLat([-9.15, 54.11]),
+      zoom: 7
+    })
+  });
 
-        var layer = new ol.layer.Vector({
-            source: new ol.source.Vector({
-                features: [
-                    new ol.Feature({
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([-9.15, 54.11]))
-                    })
-                ]
-            })
-        });
-        map.addLayer(layer);
-    </script>
+    var layer = new ol.layer.Vector({
+        source: new ol.source.Vector({
+            features: [
+                new ol.Feature({
+                    geometry: new ol.geom.Point(ol.proj.fromLonLat([-9.15, 54.11]))
+                })
+            ]
+        })
+    });
+    map.addLayer(layer);
+</script>

@@ -1,26 +1,31 @@
-<div id="<%= dom_id booking %>" class="booking-wrapper">
+<div id="<%= dom_id booking %>" class="col-md-3 col-lg-2 col-xl-4 mx-auto mb-4">
 
-<% if booking.user == current_user %>
+  <% if booking.user == current_user %>
 
-  <p class="card-title">
-    <strong>Supplier name:</strong>
-    <%= booking.Supplier_name %>
-  </p>
+  <div class="card" style="width: 25rem;">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        <strong>Supplier name:</strong>
+        <%= booking.Supplier_name %>
+      </li>
 
-  <p class="card-text">
-    <strong>Number of pallets:</strong>
-    <%= booking.Number_of_pallets %>
-  </p>
+      <li class="list-group-item">
+        <strong>Number of pallets:</strong>
+        <%= booking.Number_of_pallets %>
+      </li>
 
-  <p class="card-text">
-    <strong>Date:</strong>
-    <%= booking.Date %>
-  </p>
-  <strong>User ID:</strong>
-  <%= booking.user_id %>
-  <p>
-    <%= link_to "Manage this booking", booking %>
-  </p>
+      <li class="list-group-item">
+        <strong>Date:</strong>
+        <%= booking.Date %>
+      </li>
+      <!-- <strong>User ID:</strong>
+      <%= booking.user_id %> -->
+      <li class="list-group-item">
+        <%= link_to "Manage this booking", booking %>
+      </li>
+    </ul>
+  </div>
+  
 <% end %>
 
 </div>

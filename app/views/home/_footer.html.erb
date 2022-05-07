@@ -40,10 +40,11 @@
         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
           <!-- Content -->
           <h6 class="text-uppercase fw-bold mb-4">
-            <i class="fas fa-gem me-3"></i>Mayo Bookings
+            <i class="fas fa-gem me-3"></i>Mayo Booking
           </h6>
+          <%= image_tag("logo.png", :alt => "logo") %>
           <p>
-          This Delivery Booking System was created as a project for Cloud Application Development module at <a href="https://www.ncirl.ie" target:"_blank" rel="noreferrer">NCI</a>
+          This Delivery Booking System was created as a project for Cloud Application Development module at <a href="https://www.ncirl.ie" target="_blank" rel="noreferrer">NCI</a>
           </p>
         </div>
         <!-- Grid column -->
@@ -76,10 +77,10 @@
             Booking
           </h6>
           <p>
-          <%= link_to "New booking", new_booking_path %>
+          <%= link_to "New Booking", new_booking_path %>
           </p>
           <p>
-          <%= link_to "My bookings", bookings_path %>
+          <%= link_to "My Bookings", bookings_path %>
           </p>
           <p>
           <%= link_to 'My Account', edit_user_registration_path %>

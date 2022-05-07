@@ -1,0 +1,79 @@
+$primary-font: helvetica;
+$links-color: #1e90ff;
+$links-color-hover: #87cefa;
+$primary-color: #a52a2a;
+$secondary-color: #343a40;
+$tertiary-color: #fff;
+
+/* ---General--- */
+a, .btn a{
+    text-decoration: none;
+    color: $links-color;
+    &:hover{
+        color: $links-color-hover;
+    }
+}
+
+/* ---Home Page--- */
+.wrapper-home{
+    background-image: url("home-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+}
+.home-main{
+    background-color: rgba($color: white, $alpha: 0.6);
+    padding: 40px; 
+    margin-bottom: 40px;;
+}
+.home-lead-text, .lead {
+    color: $primary-color;
+    text-shadow: 1px 1px $tertiary-color;
+    font-weight: bolder;
+}
+.btn-home-first, .btn-about{
+    background-color: $tertiary-color;
+    a{
+        color: $secondary-color;
+    }
+    &:hover{
+        background-color: $primary-color;
+        a{
+            color: $tertiary-color;
+        }
+    }
+}
+.btn-home-second{
+    background-color: $secondary-color;
+    a{
+        color: $tertiary-color;
+    }
+    &:hover{
+        background-color: $primary-color;
+        a{
+            color: $tertiary-color;
+        }
+    }
+}
+/* ---About Page--- */
+.about-h4{
+    margin-top: 10px;
+}
+.map {
+    height: 600px;
+    width: 100%
+  }
+/* ---Booking Page--- */
+.card{
+    color: $secondary-color;
+}
+
+.bookings-index{
+    min-height: 60vh;
+}
+
+/* ---Header--- */
+.logo-header{
+    width: 90px;
+}

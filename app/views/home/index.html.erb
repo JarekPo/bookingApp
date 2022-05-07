@@ -1,22 +1,20 @@
 <div class="wrapper-home text-center">
-    <main class="px-3">
-        <h1 class="home-lead-text">Mayo Booking</h1>
-        <p class="lead">Mayo Booking is a delivery booking system crteated for CAD</p>
-        <p class="lead">
-        </p>
+    <main class="px-3 home-main"><br/>
+        <h1 class="home-lead-text home-h1">Mayo <%= image_tag("logo.png", :alt => "logo") %> Booking</h1>
+        <p class="lead">Welcome to Mayo Booking - a delivery booking system</p>
     </main>
     <% if user_signed_in? %>
-        <div class="btn btn-lg btn-secondary fw-bold  bg-white btn-outline-primary">
-            <%= link_to "New booking", new_booking_path %>
+        <div class="btn btn-lg btn-secondary fw-bold  btn-home-first">
+            <%= link_to "New Booking", new_booking_path %>
         </div>
-        <div class="btn btn-lg btn-secondary fw-bold  bg-white btn-outline-primary">
-            <%= link_to "My bookings", bookings_path %>
+        <div class="btn btn-lg btn-secondary fw-bold  btn-home-second">
+            <%= link_to "My Bookings", bookings_path %>
         </div>
     <% else %>
-        <div class="btn btn-lg btn-secondary fw-bold  bg-white btn-outline-primary">
+        <div class="btn btn-lg btn-secondary fw-bold btn-home-first">
             <%= link_to 'Login', new_user_session_path, class:"nav-link" %>
         </div>
-        <div class="btn btn-lg btn-secondary fw-bold  bg-white btn-outline-primary">
+        <div class="btn btn-lg btn-secondary fw-bold  btn-home-second">
             <%= link_to 'Register', new_user_registration_path, class:"nav-link" %>
         </div>
     <% end %>

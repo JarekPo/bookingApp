@@ -2,10 +2,11 @@
 
 <%= render @booking %>
 
-<div>
-  <%= button_to "Print confirmation", '#', onclick: "window.print()" %>
+<div class="col-md-3 col-lg-2 col-xl-4 mx-auto mb-4">
+
   <%= link_to "Edit this booking", edit_booking_path(@booking) %> |
   <%= link_to "All bookings", bookings_path %>
-
+  <%= button_to "Print confirmation", '#', onclick: "window.print()" %>
   <%= button_to "Cancel this booking", @booking, method: :delete %>
+  
 </div>

@@ -11,17 +11,17 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :Supplier_name, style: "display: block" %>
-    <%= form.text_field :Supplier_name %>
+  <div class="col-md-3 col-lg-2 col-xl-4 mx-auto mb-4">
+    <%= form.label :Supplier_name, style: "display: block", class: "form-label" %>
+    <%= form.text_field :Supplier_name, class: "form-control" %>
   </div>
 
-  <div>
-    <%= form.label :Number_of_pallets, style: "display: block" %>
-    <%= form.number_field :Number_of_pallets %>
+  <div class="col-md-3 col-lg-2 col-xl-4 mx-auto mb-4">
+    <%= form.label :Number_of_pallets, style: "display: block", class: "form-label" %>
+    <%= form.number_field :Number_of_pallets, class: "form-control" %>
   </div>
 
-  <div>
+  <div class="col-md-3 col-lg-2 col-xl-4 mx-auto mb-4">
     <%= form.label :Date, style: "display: block" %>
     <%= form.date_field :Date %>
   </div>
@@ -31,7 +31,7 @@
   </div>
 
 
-  <div>
+  <div class="col-md-3 col-lg-2 col-xl-4 mx-auto mb-4">
     <%= form.submit %>
   </div>
 <% end %>
