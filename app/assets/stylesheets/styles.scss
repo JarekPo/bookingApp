@@ -1,0 +1,70 @@
+$primary-font: helvetica;
+$primary-color: #a52a2a;
+$secondary-color: #343a40;
+$tertiary-color: white;
+
+/* ---General--- */
+.btn a{
+    text-decoration: none;
+}
+/* ---Home Page--- */
+.wrapper-home{
+    background-image: url("home-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+}
+.home-main{
+    background-color: rgba($color: white, $alpha: 0.6);   
+}
+.home-lead-text, .lead {
+    color: $primary-color;
+    text-shadow: 2px 2px $tertiary-color;
+    font-weight: bolder;
+}
+.btn-home-first, .btn-about{
+    background-color: $tertiary-color;
+    a{
+        color: $secondary-color;
+    }
+    &:hover{
+        background-color: $primary-color;
+        a{
+            color: $tertiary-color;
+        }
+    }
+}
+.btn-home-second{
+    background-color: $secondary-color;
+    a{
+        color: $tertiary-color;
+    }
+    &:hover{
+        background-color: $primary-color;
+        a{
+            color: $tertiary-color;
+        }
+    }
+}
+/* ---About Page--- */
+.about-h4{
+    margin-top: 10px;
+}
+.map {
+    height: 600px;
+    width: 100%
+  }
+/* ---Booking Page--- */
+.booking-wrapper{
+    color: $primary-color;
+}
+
+.bookings-index{
+    min-height: 60vh;
+}
+
+/* ---Header--- */
+.logo-header{
+    width: 90px;
+}
