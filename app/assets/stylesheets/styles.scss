@@ -1,12 +1,19 @@
 $primary-font: helvetica;
+$links-color: #1e90ff;
+$links-color-hover: #87cefa;
 $primary-color: #a52a2a;
 $secondary-color: #343a40;
-$tertiary-color: white;
+$tertiary-color: #fff;
 
 /* ---General--- */
-.btn a{
+a, .btn a{
     text-decoration: none;
+    color: $links-color;
+    &:hover{
+        color: $links-color-hover;
+    }
 }
+
 /* ---Home Page--- */
 .wrapper-home{
     background-image: url("home-bg.jpg");
@@ -16,11 +23,13 @@ $tertiary-color: white;
     height: 80vh;
 }
 .home-main{
-    background-color: rgba($color: white, $alpha: 0.6);   
+    background-color: rgba($color: white, $alpha: 0.6);
+    padding: 40px; 
+    margin-bottom: 40px;;
 }
 .home-lead-text, .lead {
     color: $primary-color;
-    text-shadow: 2px 2px $tertiary-color;
+    text-shadow: 1px 1px $tertiary-color;
     font-weight: bolder;
 }
 .btn-home-first, .btn-about{
@@ -56,8 +65,8 @@ $tertiary-color: white;
     width: 100%
   }
 /* ---Booking Page--- */
-.booking-wrapper{
-    color: $primary-color;
+.card{
+    color: $secondary-color;
 }
 
 .bookings-index{
