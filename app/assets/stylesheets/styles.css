@@ -7,8 +7,11 @@
     height: 80vh;
 }
 
-.home-lead-text {
-    color: saddlebrown;
+.home-lead-text, .lead {
+    color: black;
+}
+.lead {
+    font-weight: bold;
 }
 
 .booking-wrapper{
