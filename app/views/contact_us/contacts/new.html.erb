@@ -1,0 +1,39 @@
+<h2 class="col-md-3 col-lg-2 col-xl-4 mx-auto mb-4"><%= t('.contact_us') %></h2>
+
+<%= form_for @contact, :url => contacts_path, :html => {:class => 'formtastic'} do |f| %>
+  <% if ContactUs.require_name %>
+  <div class="col-md-3 col-lg-2 col-xl-4 mx-auto mb-4">
+      <%= f.label :name, (t('.name') + content_tag(:abbr, '*', :class => 'required')).html_safe, class: "form-label" %>
+      <%= f.text_field :name, class: "form-control" %>
+      <% if f.object.errors[:name].present? %>
+        <p class='inline-error'><%= f.object.errors[:name].join(' and ') %></p>
+      <% end %>
+    </div>
+  <% end %>
+  <div class="col-md-3 col-lg-2 col-xl-4 mx-auto mb-4">
+    <%= f.label :email, (t('.email') + content_tag(:abbr, '*', :class => 'required')).html_safe, class: "form-label" %>
+    <%= f.text_field :email, class: "form-control" %>
+    <% if f.object.errors[:email].present? %>
+      <p class='inline-error'><%= f.object.errors[:email].join(' and ') %></p>
+    <% end %>
+  </div>
+  <% if ContactUs.require_subject %>
+  <div class="col-md-3 col-lg-2 col-xl-4 mx-auto mb-4">
+      <%= f.label :subject, (t('.subject') + content_tag(:abbr, '*', :class => 'required')).html_safe, class: "form-label" %>
+      <%= f.text_field :subject, class: "form-control" %>
+      <% if f.object.errors[:subject].present? %>
+        <p class='inline-error'><%= f.object.errors[:subject].join(' and ') %></p>
+      <% end %>
+    </div>
+  <% end %>
+  <div class="col-md-3 col-lg-2 col-xl-4 mx-auto mb-4">
+    <%= f.label :message, (t('.message') + content_tag(:abbr, '*', :class => 'required')).html_safe, class: "form-label" %>
+    <%= f.text_area :message, class: "form-control" %>
+    <% if f.object.errors[:message].present? %>
+      <p class='inline-error'><%= f.object.errors[:message].join(' and ') %></p>
+    <% end %>
+  </div>
+  <div class="col-md-3 col-lg-2 col-xl-4 mx-auto mb-4">
+    <%= f.submit :submit, :class => 'submit create', :title => t('.submit') %>
+  </div>
+<% end %>

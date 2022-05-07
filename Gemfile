@@ -31,6 +31,8 @@ gem 'devise', '~> 4.8', '>= 4.8.1'
 
 gem 'date_validator'
 
+gem 'contact_us'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
