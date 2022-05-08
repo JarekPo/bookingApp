@@ -1,6 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <%= image_tag("logo.png", :alt => "logo", :class => "logo-header") %> &nbsp; &nbsp;
+    <%= link_to root_path do %>
+      <%= image_tag("logo.png", :alt => "logo", :class => "logo-header") %>
+    <% end %>
     <%= link_to 'Home', root_path, class:"navbar-brand" %>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -38,7 +40,7 @@
         <% end %>
 
       </ul>
-      <form class="d-flex float-right">&nbsp;
+      <form action="https://google.com" target="_blank" rel= “noreferrer" class="d-flex float-right">&nbsp;
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-secondary" type="submit">Search</button>
       </form>

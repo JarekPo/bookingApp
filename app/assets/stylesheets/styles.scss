@@ -14,7 +14,20 @@ a, .btn a{
     }
 }
 .bookings-index{
-    min-height: 60vh;
+    min-height: 35vh;
+}
+.btn-forms{
+    background-color: $tertiary-color;
+    color: $secondary-color;
+    a{
+        color: $secondary-color;
+    }
+    &:hover{
+        background-color: $primary-color;
+        a{
+            color: $tertiary-color;
+        }
+    }
 }
 
 /* ---Home Page--- */
@@ -47,8 +60,12 @@ a, .btn a{
         }
     }
 }
+.btn-home-first{
+    margin: 10px;
+}
 .btn-home-second{
     background-color: $secondary-color;
+    margin: 10px;
     a{
         color: $tertiary-color;
     }
@@ -75,4 +92,5 @@ a, .btn a{
 /* ---Header--- */
 .logo-header{
     width: 90px;
+    margin-right: 20px;
 }
