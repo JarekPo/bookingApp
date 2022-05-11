@@ -5,7 +5,7 @@
 
   <%= link_to "Edit this booking", edit_booking_path(@booking) %> |
   <%= link_to "All bookings", bookings_path %>
-  <%= button_to "Print confirmation", '#', onclick: "window.print()" %>
-  <%= button_to "Cancel this booking", @booking, method: :delete %>
+  <%= button_to "Print confirmation", '#', onclick: "window.print()", :class => "btn btn-secondary btn-md fw-bold btn-forms" %>
+  <%= button_to "Cancel this booking", @booking, method: :delete, :class => "btn btn-secondary btn-md fw-bold btn-forms" %>
   
 </div>
