@@ -10,36 +10,20 @@ class BookingsTest < ApplicationSystemTestCase
     assert_selector "h1", text: "Bookings"
   end
 
-  test "should create booking" do
-    visit bookings_url
-    click_on "New booking"
 
-    fill_in "Date", with: @booking.Date
-    fill_in "Number of pallets", with: @booking.Number_of_pallets
-    fill_in "Supplier name", with: @booking.Supplier_name
-    click_on "Create Booking"
-
-    assert_text "Booking was successfully created"
-    click_on "Back"
+  test "should log in" do
+    visit "/users/sign_in"
+    fill_in "Email", with: "aa@a.a"
+    fill_in "Password", with: "password"
+    click_on "Log in"
   end
 
-  test "should update Booking" do
-    visit booking_url(@booking)
-    click_on "Edit this booking", match: :first
-
-    fill_in "Date", with: @booking.Date
-    fill_in "Number of pallets", with: @booking.Number_of_pallets
-    fill_in "Supplier name", with: @booking.Supplier_name
-    click_on "Update Booking"
-
-    assert_text "Booking was successfully updated"
-    click_on "Back"
+  test "should register" do
+    visit "/users/sign_up"
+    fill_in "Email", with: "bb@a.a"
+    fill_in "Password", with: "password"
+    fill_in "Password confirmation", with: "password"
+    click_on "Sign up"
   end
 
-  test "should destroy Booking" do
-    visit booking_url(@booking)
-    click_on "Destroy this booking", match: :first
-
-    assert_text "Booking was successfully destroyed"
-  end
 end

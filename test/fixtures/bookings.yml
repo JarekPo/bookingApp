@@ -3,9 +3,9 @@
 one:
   Supplier_name: MyString
   Number_of_pallets: 1
-  Date: 2022-05-01
+  Date: 20220529
 
 two:
   Supplier_name: MyString
   Number_of_pallets: 1
-  Date: 2022-05-01
+  Date: 2022-05-29
