@@ -1,24 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+Mayo Booking - a system for booking deliveries of palletized orders to the storage warehouse
 
 * Ruby version
+3.0.3
+* Rails version
+7.0.2.3
 
 * System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
+'devise', '~> 4.8', '>= 4.8.1'
+'date_validator'
+'contact_us'
+"sqlite3", "~> 1.4"
 
 * Deployment instructions
+Replace sqlite3 gem with the deignated database gem (eg. PostrgreSQL) and run bundle install
 
-* ...
+[Mayo Booking App link](https://mayo-booking.herokuapp.com)
